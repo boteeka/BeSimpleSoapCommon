@@ -54,7 +54,7 @@ class MultiPart extends PartHeader
         $this->setHeader('MIME-Version', '1.0');
         $this->setHeader('Content-Type', 'multipart/related');
         $this->setHeader('Content-Type', 'type', 'text/xml');
-        $this->setHeader('Content-Type', 'charset', 'utf-8');
+        // The multipart block as a whole does not have a charset
         if (is_null($boundary)) {
             $boundary = $this->generateBoundary();
         }
